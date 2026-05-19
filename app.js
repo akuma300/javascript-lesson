@@ -98,8 +98,49 @@ remainder(5,3)
 console.log(5 +'を' + 3 + 'で割った余りは' + remainder(5,3) + 'です' );
 
 //q10
-function foo() {
-  let x = 1;
-}
-console.log(x);
+
 //JavaScriptでは、関数の中で変更した変数の値を、関数の外で参照することができない(スコープの有効範囲外になる)ためエラーが出力される。
+
+
+//応用問題　q1
+let random = Math.floor(Math.random() * 10);
+console.log(random);
+
+//q2
+setTimeout(function() {
+  console.log('Hello World!');
+}, 3000);
+
+//q3
+let num = 0
+if (num > 0) {
+  console.log('num is greater than 0');
+} else if (num < 0) {
+  console.log('num is less than 0');
+} else if (num === 0) {
+  console.log('num is 0');
+}
+
+//q4
+let numbers = [];
+
+for (let i = 0; i <= 99; i++) {
+  numbers [i]=  i;
+}
+
+console.log(numbers);
+
+//q5
+let mixed = [4, '2', 5, '8', '9', 0, 1];
+
+for (let i = 0; i < mixed.length; i++) {
+  if (typeof mixed[i] === 'number') {
+    if (mixed[i] % 2 === 0) {
+      console.log('even');
+    } else {
+      console.log('odd');
+    }
+  } else {
+    console.log('not number');
+  }
+}
